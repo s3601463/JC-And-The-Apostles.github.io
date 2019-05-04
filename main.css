@@ -1,19 +1,19 @@
 	.titleHeader {background-color: #ff9800; border: none; color: black; padding: 10px 5px; text-align: center; display: inline-block; font-weight: bold; font-size: 60px; font-family: Ariel, Geneva, sans-serif; margin: 6px 2px; margin-top: 25px; border-radius: 20px; }
 	.topMargin {margin-top: 25px; }
-	.tablink {background-color: #ff9800; border: none; color: black; padding: 6px 16px; text-align: center; display: inline-block; font-size: 27px; margin: 3px 1px; margin-top: 50px; cursor: pointer; }
+	.tablink {background-color: #ff9800; border: none; color: black; padding: 6px 16px; text-align: center; display: inline-block; font-size: 27px; margin: 3px 1px; margin-top: 50px; cursor: url("cross with cloth.cur"), pointer !important; }
 	.tabM {border-radius: 4px; margin-right: 50px; font-weight: bold;}
-	.imgFit {width: 250px; height: 120px; max-width: 100%; max-height: 100vh; object-fit: contain; cursor: pointer;}
-	.imgFitA {width: 64px; height: 64px; max-width: 100%; max-height: 100vh; object-fit: contain; cursor: pointer;}
-	.imgFitCon {width: 250px; height: 120px; max-width: 100%; max-height: 100vh; object-fit: contain; align: center; cursor: pointer;}
-	.SubHeadText {color: #ff9800; font-family: Ariel, Geneva, sans-serif; display: inline-block | inline-grid; text-align: center; text-decoration: none; cursor: pointer; margin-bottom: 10px;}
-	.FooterText {color: #ff9800; font-family: Ariel, Geneva, sans-serif; display: inline-block | inline-grid; text-align: left; text-decoration: none; cursor: pointer; margin-bottom: 10px;}
+	.imgFit {width: 250px; height: 120px; max-width: 100%; max-height: 100vh; object-fit: contain; cursor: url("cross with cloth.cur"), pointer !important;}
+	.imgFitA {width: 64px; height: 64px; max-width: 100%; max-height: 100vh; object-fit: contain; cursor: url("cross with cloth.cur"), pointer !important;}
+	.imgFitCon {width: 250px; height: 120px; max-width: 100%; max-height: 100vh; object-fit: contain; align: center; cursor: url("cross with cloth.cur"), pointer !important;}
+	.SubHeadText {color: #7D6608; font-family: Ariel, Geneva, sans-serif; display: inline-block | inline-grid; text-align: center; text-decoration: none; /*cursor: url("cross with cloth.cur"), pointer !important;*/ margin-bottom: 10px;}
+	.FooterText {color: #7D6608; font-family: Ariel, Geneva, sans-serif; display: inline-block | inline-grid; text-align: left; text-decoration: none; cursor: url("cross with cloth.cur"), pointer !important; margin-bottom: 10px;}
 	.grid-container {
 		display: grid;
 		justify-content: space-evenly;
 		justify-items: center
 		align-content: center;
 		grid-template-areas: 
-		'headerL headerSML headerM headerM headerSMR headerR' 
+		'header header header header header header' 
 		'DeadSpaceL middle middle middle middle DeadSpaceR' 
 		'footerL footerLL footerM footerM footerR footerR';
 		grid-column-gap: 20px;
@@ -24,13 +24,18 @@
 		grid-area: middle;
 	}
 	.grid-header{
-		margin-top: 10px;
+		margin-top: 0px;
 		padding: 5px;
-		grid-area: headerM;
+		grid-area: header;
 	}
 	.grid-logo {
 		padding: 5px;
 		grid-area: headerL;		
+	}
+	.grid-header-full{
+		margin-top: 1px;
+		padding: 5px;
+		grid-area: headerL headerSML headerM headerM headerSMR headerR; 
 	}
 	.grid-button {
 		display: grid | inline-block;
@@ -62,6 +67,18 @@
 		padding: 10px;
 		grid-area: footerR;
 		display: inline-block | inline-grid;
+	}
+	.grid-footer {
+		grid-area: footerL footerLL footerM footerM footerR footerR;
+		padding: 10px;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		border-style: ridge hidden ridge hidden; 
+		border-width: 1px;
+		border-color: white;
+		background-color: black;
+		width: 100%;
 	}
 	.hub {
 		display: block;
@@ -111,14 +128,41 @@
 		border-width: 2px;
 	}
 	.bodyText {
-		background-color:#0F0F0F; 
-		color:white; 
+		background-color: gray; 
+		color:gold; 
 		padding: 5px 5px; 
-		border-style:outset; 
+		border-style:inset; 
+		border-color: darkgray;
 		border-radius: 10px; 
 		border-width: 2px;
 	}
 	.mhText {
 		text-decoration: underline; 
 		font-weight: bold;
+	}
+	body {
+		background-image: url("meme.jpg");
+		background-repeat: repeat-x repeat-y;
+		background-size: 100px 58px;
+	}
+	.main-body {
+		background-color: lightgray;
+		border-style: 3px inset silver;
+		grid-area: middle DeadSpaceR;
+		height:80vh;
+		margin-top:-5vh;
+	}
+	.body {}
+	li {
+		list-style-image: url("List_Icon.png");
+		margin-left: 5vw;
+	}
+	.divHL {
+		color: blue;
+		font-weight: bold;
+		text-decoration: underline;
+		cursor: url("cross with cloth.cur"), pointer !important;
+	}
+	html {
+		cursor: url(http://cur.cursors-4u.net/people/peo-1/peo17.cur), default !important;
 	}
