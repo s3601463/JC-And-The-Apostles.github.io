@@ -3,7 +3,7 @@ function redirHP(){
 	window.location.assign("index.html");
 }
 function redirPI(){
-	window.location.assign("Project-Idea.html");
+	window.location.assign("Project-Ideas.html");
 }
 function redirID(){
 	window.location.assign("Industry-Data.html");
