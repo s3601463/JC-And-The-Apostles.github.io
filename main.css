@@ -179,3 +179,11 @@
 	html {
 		cursor: url(http://cur.cursors-4u.net/people/peo-1/peo17.cur), default !important;
 	}
+	.navBar {
+		position: absolute;
+		background-color:darkgray;
+		border-color:gold;
+		border-width: 2px;
+		border-style: inset;
+		left: 3vw;
+	}
