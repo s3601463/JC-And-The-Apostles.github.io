@@ -56,7 +56,7 @@ function redirTP(){
 	}
 }
 function forced404(){
-	window.location.assign("404-error.html");
+	window.location.assign("404-Error.html");
 }
 
 function idPG2(){
